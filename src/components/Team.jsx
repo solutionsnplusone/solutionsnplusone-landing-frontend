@@ -1,6 +1,10 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 
 export const Team = (props) => {
+  const { t } = useTranslation();
+  const team = t('team', { returnObjects: true });
+  
   return (
     <div id="team" className="text-center">
       <div className="container">
@@ -14,13 +18,13 @@ export const Team = (props) => {
         <div id="row">
           {props.data
             ? props.data.map((d, i) => (
-                <div key={`${d.name}-${i}`} className="col-md-3 col-sm-6 team">
+                <div key={`${team[i]?.name || d.name}-${i}`} className="col-md-3 col-sm-6 team">
                   <div className="thumbnail">
                     {" "}
                     <img src={d.img} alt="..." className="team-img" />
                     <div className="caption">
-                      <h4>{d.name}</h4>
-                      <p>{d.job}</p>
+                      <h4>{team[i]?.name || d.name}</h4>
+                      <p>{team[i]?.job || d.job}</p>
                     </div>
                   </div>
                 </div>

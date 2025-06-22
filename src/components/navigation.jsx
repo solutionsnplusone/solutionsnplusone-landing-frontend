@@ -1,6 +1,10 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 export const Navigation = (props) => {
+  const { t } = useTranslation();
+  
   return (
     <nav id="menu" className="navbar navbar-default navbar-fixed-top">
       <div className="container">
@@ -18,7 +22,7 @@ export const Navigation = (props) => {
             <span className="icon-bar"></span>{" "}
           </button>
           <a className="navbar-brand page-scroll" href="#page-top">
-            React Landing Page
+            {t('navigation.brand')}
           </a>{" "}
         </div>
 
@@ -29,38 +33,41 @@ export const Navigation = (props) => {
           <ul className="nav navbar-nav navbar-right">
             <li>
               <a href="#features" className="page-scroll">
-                Features
+                {t('navigation.features')}
               </a>
             </li>
             <li>
               <a href="#about" className="page-scroll">
-                About
+                {t('navigation.about')}
               </a>
             </li>
             <li>
               <a href="#services" className="page-scroll">
-                Services
+                {t('navigation.services')}
               </a>
             </li>
             <li>
               <a href="#portfolio" className="page-scroll">
-                Gallery
+                {t('navigation.gallery')}
               </a>
             </li>
             <li>
               <a href="#testimonials" className="page-scroll">
-                Testimonials
+                {t('navigation.testimonials')}
               </a>
             </li>
             <li>
               <a href="#team" className="page-scroll">
-                Team
+                {t('navigation.team')}
               </a>
             </li>
             <li>
               <a href="#contact" className="page-scroll">
-                Contact
+                {t('navigation.contact')}
               </a>
+            </li>
+            <li style={{ paddingLeft: '10px' }}>
+              <LanguageSwitcher />
             </li>
           </ul>
         </div>

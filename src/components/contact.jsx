@@ -1,6 +1,7 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import React from "react";
+import { useTranslation } from 'react-i18next';
 
 const initialState = {
   name: "",
@@ -8,6 +9,7 @@ const initialState = {
   message: "",
 };
 export const Contact = (props) => {
+  const { t } = useTranslation();
   const [{ name, email, message }, setState] = useState(initialState);
 
   const handleChange = (e) => {
@@ -105,7 +107,7 @@ export const Contact = (props) => {
                 <span>
                   <i className="fa fa-map-marker"></i> Address
                 </span>
-                {props.data ? props.data.address : "loading"}
+                {t('contact.address')}
               </p>
             </div>
             <div className="contact-item">
@@ -113,7 +115,7 @@ export const Contact = (props) => {
                 <span>
                   <i className="fa fa-phone"></i> Phone
                 </span>{" "}
-                {props.data ? props.data.phone : "loading"}
+                {t('contact.phone')}
               </p>
             </div>
             <div className="contact-item">
@@ -121,7 +123,7 @@ export const Contact = (props) => {
                 <span>
                   <i className="fa fa-envelope-o"></i> Email
                 </span>{" "}
-                {props.data ? props.data.email : "loading"}
+                {t('contact.email')}
               </p>
             </div>
           </div>
