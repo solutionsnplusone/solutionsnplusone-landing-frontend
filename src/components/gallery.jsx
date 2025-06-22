@@ -20,7 +20,7 @@ export const Gallery = (props) => {
             {props.data
               ? props.data.map((d, i) => (
                   <div
-                    key={`${d.title}-${i}`}
+                    key={`project-${i}`}
                     className="col-sm-6 col-md-4 col-lg-4"
                   >
                     <Image

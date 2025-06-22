@@ -16,15 +16,15 @@ export const Team = (props) => {
           </p>
         </div>
         <div id="row">
-          {props.data
-            ? props.data.map((d, i) => (
-                <div key={`${team[i]?.name || d.name}-${i}`} className="col-md-3 col-sm-6 team">
+          {props.data && team
+            ? props.data.map((asset, i) => (
+                <div key={`team-${i}`} className="col-md-3 col-sm-6 team">
                   <div className="thumbnail">
                     {" "}
-                    <img src={d.img} alt="..." className="team-img" />
+                    <img src={asset.img} alt="..." className="team-img" />
                     <div className="caption">
-                      <h4>{team[i]?.name || d.name}</h4>
-                      <p>{team[i]?.job || d.job}</p>
+                      <h4>{team[i]?.name}</h4>
+                      <p>{team[i]?.job}</p>
                     </div>
                   </div>
                 </div>

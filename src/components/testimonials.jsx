@@ -12,17 +12,17 @@ export const Testimonials = (props) => {
           <h2>What our clients say</h2>
         </div>
         <div className="row">
-          {props.data
-            ? props.data.map((d, i) => (
-                <div key={`${testimonials[i]?.name || d.name}-${i}`} className="col-md-4">
+          {props.data && testimonials
+            ? props.data.map((asset, i) => (
+                <div key={`testimonial-${i}`} className="col-md-4">
                   <div className="testimonial">
                     <div className="testimonial-image">
                       {" "}
-                      <img src={d.img} alt="" />{" "}
+                      <img src={asset.img} alt="" />{" "}
                     </div>
                     <div className="testimonial-content">
-                      <p>{testimonials[i]?.text || d.text}</p>
-                      <div className="testimonial-meta"> - {testimonials[i]?.name || d.name} </div>
+                      <p>{testimonials[i]?.text}</p>
+                      <div className="testimonial-meta"> - {testimonials[i]?.name} </div>
                     </div>
                   </div>
                 </div>
