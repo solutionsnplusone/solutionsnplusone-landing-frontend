@@ -1,69 +1,130 @@
-import React from "react";
+import React, { useState } from "react";
+import { useTranslation } from 'react-i18next';
+import { LanguageSwitcher } from './LanguageSwitcher';
+import { assets } from '../config/assets';
 
 export const Navigation = (props) => {
+  const { t } = useTranslation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
   return (
-    <nav id="menu" className="navbar navbar-default navbar-fixed-top">
-      <div className="container">
-        <div className="navbar-header">
-          <button
-            type="button"
-            className="navbar-toggle collapsed"
-            data-toggle="collapse"
-            data-target="#bs-example-navbar-collapse-1"
-          >
-            {" "}
-            <span className="sr-only">Toggle navigation</span>{" "}
-            <span className="icon-bar"></span>{" "}
-            <span className="icon-bar"></span>{" "}
-            <span className="icon-bar"></span>{" "}
-          </button>
-          <a className="navbar-brand page-scroll" href="#page-top">
-            React Landing Page
-          </a>{" "}
+    <nav className="fixed top-0 left-0 right-0 bg-primary shadow-lg z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo and Brand */}
+          <div className="flex items-center">
+            <a href="#page-top" className="navbar-brand">
+              <img 
+                src={assets.logo} 
+                alt="Solutions N+1 Logo" 
+                className="h-8 w-auto mr-3"
+              />
+              <span className="hidden sm:block">{t('navigation.brand')}</span>
+            </a>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-8">
+            <a href="#features" className="nav-link">
+              {t('navigation.features')}
+            </a>
+            <a href="#about" className="nav-link">
+              {t('navigation.about')}
+            </a>
+            <a href="#services" className="nav-link">
+              {t('navigation.services')}
+            </a>
+            <a href="#portfolio" className="nav-link">
+              {t('navigation.gallery')}
+            </a>
+            <a href="#testimonials" className="nav-link">
+              {t('navigation.testimonials')}
+            </a>
+            <a href="#team" className="nav-link">
+              {t('navigation.team')}
+            </a>
+            <a href="#contact" className="nav-link">
+              {t('navigation.contact')}
+            </a>
+            <LanguageSwitcher />
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="lg:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-white hover:text-gray-200 focus:outline-none focus:text-gray-200 transition-colors duration-300"
+            >
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                {isMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
 
-        <div
-          className="collapse navbar-collapse"
-          id="bs-example-navbar-collapse-1"
-        >
-          <ul className="nav navbar-nav navbar-right">
-            <li>
-              <a href="#features" className="page-scroll">
-                Features
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="lg:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-primary-dark">
+              <a 
+                href="#features" 
+                className="block px-3 py-2 text-white hover:text-gray-200 hover:bg-primary-light rounded-md transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t('navigation.features')}
               </a>
-            </li>
-            <li>
-              <a href="#about" className="page-scroll">
-                About
+              <a 
+                href="#about" 
+                className="block px-3 py-2 text-white hover:text-gray-200 hover:bg-primary-light rounded-md transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t('navigation.about')}
               </a>
-            </li>
-            <li>
-              <a href="#services" className="page-scroll">
-                Services
+              <a 
+                href="#services" 
+                className="block px-3 py-2 text-white hover:text-gray-200 hover:bg-primary-light rounded-md transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t('navigation.services')}
               </a>
-            </li>
-            <li>
-              <a href="#portfolio" className="page-scroll">
-                Gallery
+              <a 
+                href="#portfolio" 
+                className="block px-3 py-2 text-white hover:text-gray-200 hover:bg-primary-light rounded-md transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t('navigation.gallery')}
               </a>
-            </li>
-            <li>
-              <a href="#testimonials" className="page-scroll">
-                Testimonials
+              <a 
+                href="#testimonials" 
+                className="block px-3 py-2 text-white hover:text-gray-200 hover:bg-primary-light rounded-md transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t('navigation.testimonials')}
               </a>
-            </li>
-            <li>
-              <a href="#team" className="page-scroll">
-                Team
+              <a 
+                href="#team" 
+                className="block px-3 py-2 text-white hover:text-gray-200 hover:bg-primary-light rounded-md transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t('navigation.team')}
               </a>
-            </li>
-            <li>
-              <a href="#contact" className="page-scroll">
-                Contact
+              <a 
+                href="#contact" 
+                className="block px-3 py-2 text-white hover:text-gray-200 hover:bg-primary-light rounded-md transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t('navigation.contact')}
               </a>
-            </li>
-          </ul>
-        </div>
+              <div className="px-3 py-2">
+                <LanguageSwitcher />
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );

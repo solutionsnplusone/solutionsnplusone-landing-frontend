@@ -1,13 +1,16 @@
 {
-  "name": "landingpage-react-template",
+  "name": "solutionsnplusone-landing-frontend",
+  "homepage": "https://solutionsnplusone.github.io/solutionsnplusone-landing-frontend",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "emailjs-com": "^2.6.4",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "@emailjs/browser": "^4.4.1",
+    "caniuse-lite": "^1.0.30001724",
+    "i18next": "^25.2.1",
+    "i18next-browser-languagedetector": "^8.2.0",
+    "i18next-http-backend": "^3.0.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-i18next": "^15.5.3",
     "react-scripts": "^5.0.1",
     "smooth-scroll": "^16.1.3"
   },
@@ -15,7 +18,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,5 +36,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17"
   }
 }

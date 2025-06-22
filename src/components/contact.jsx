@@ -1,13 +1,16 @@
 import { useState } from "react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import React from "react";
+import { useTranslation } from 'react-i18next';
 
 const initialState = {
   name: "",
   email: "",
   message: "",
 };
+
 export const Contact = (props) => {
+  const { t } = useTranslation();
   const [{ name, email, message }, setState] = useState(initialState);
 
   const handleChange = (e) => {
@@ -16,13 +19,11 @@ export const Contact = (props) => {
   };
   const clearState = () => setState({ ...initialState });
   
-  
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(name, email, message);
     
-    {/* replace below with your own Service ID, Template ID and Public Key from your EmailJS account */ }
-    
+    // replace below with your own Service ID, Template ID and Public Key from your EmailJS account
     emailjs
       .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_PUBLIC_KEY")
       .then(
@@ -35,131 +36,117 @@ export const Contact = (props) => {
         }
       );
   };
+
   return (
     <div>
-      <div id="contact">
-        <div className="container">
-          <div className="col-md-8">
-            <div className="row">
-              <div className="section-title">
-                <h2>Get In Touch</h2>
-                <p>
-                  Please fill out the form below to send us an email and we will
-                  get back to you as soon as possible.
-                </p>
+      <section id="contact" className="py-16 lg:py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <div className="lg:col-span-2">
+              <div className="section-title text-left">
+                <h2>{t('contact.title')}</h2>
+                <p>{t('contact.subtitle')}</p>
               </div>
-              <form name="sentMessage" validate onSubmit={handleSubmit}>
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        className="form-control"
-                        placeholder="Name"
-                        required
-                        onChange={handleChange}
-                      />
-                      <p className="help-block text-danger"></p>
-                    </div>
+              <form name="sentMessage" onSubmit={handleSubmit} className="contact-form">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      className="form-input"
+                      placeholder={t('contact.namePlaceholder')}
+                      required
+                      onChange={handleChange}
+                      value={name}
+                    />
                   </div>
-                  <div className="col-md-6">
-                    <div className="form-group">
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        className="form-control"
-                        placeholder="Email"
-                        required
-                        onChange={handleChange}
-                      />
-                      <p className="help-block text-danger"></p>
-                    </div>
+                  <div>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      className="form-input"
+                      placeholder={t('contact.emailPlaceholder')}
+                      required
+                      onChange={handleChange}
+                      value={email}
+                    />
                   </div>
                 </div>
-                <div className="form-group">
+                <div className="mb-6">
                   <textarea
                     name="message"
                     id="message"
-                    className="form-control"
-                    rows="4"
-                    placeholder="Message"
+                    className="form-textarea"
+                    rows="6"
+                    placeholder={t('contact.messagePlaceholder')}
                     required
                     onChange={handleChange}
+                    value={message}
                   ></textarea>
-                  <p className="help-block text-danger"></p>
                 </div>
-                <div id="success"></div>
-                <button type="submit" className="btn btn-custom btn-lg">
-                  Send Message
+                <button type="submit" className="btn-primary">
+                  {t('contact.sendMessage')}
                 </button>
               </form>
             </div>
-          </div>
-          <div className="col-md-3 col-md-offset-1 contact-info">
-            <div className="contact-item">
-              <h3>Contact Info</h3>
-              <p>
-                <span>
-                  <i className="fa fa-map-marker"></i> Address
-                </span>
-                {props.data ? props.data.address : "loading"}
-              </p>
-            </div>
-            <div className="contact-item">
-              <p>
-                <span>
-                  <i className="fa fa-phone"></i> Phone
-                </span>{" "}
-                {props.data ? props.data.phone : "loading"}
-              </p>
-            </div>
-            <div className="contact-item">
-              <p>
-                <span>
-                  <i className="fa fa-envelope-o"></i> Email
-                </span>{" "}
-                {props.data ? props.data.email : "loading"}
-              </p>
-            </div>
-          </div>
-          <div className="col-md-12">
-            <div className="row">
-              <div className="social">
-                <ul>
-                  <li>
-                    <a href={props.data ? props.data.facebook : "/"}>
+            
+            <div className="lg:col-span-1">
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-800 mb-6">{t('contact.contactInfo')}</h3>
+                
+                <div className="contact-info-item">
+                  <i className="fa fa-map-marker text-primary mr-3"></i>
+                  <div>
+                    <strong>{t('contact.addressLabel')}:</strong><br />
+                    {t('contact.address')}
+                  </div>
+                </div>
+                
+                <div className="contact-info-item">
+                  <i className="fa fa-phone text-primary mr-3"></i>
+                  <div>
+                    <strong>{t('contact.phoneLabel')}:</strong><br />
+                    {t('contact.phone')}
+                  </div>
+                </div>
+                
+                <div className="contact-info-item">
+                  <i className="fa fa-envelope-o text-primary mr-3"></i>
+                  <div>
+                    <strong>{t('contact.emailLabel')}:</strong><br />
+                    {t('contact.email')}
+                  </div>
+                </div>
+                
+                <div className="mt-8">
+                  <h4 className="text-lg font-bold text-gray-800 mb-4">Follow Us</h4>
+                  <div className="flex space-x-4">
+                    <a href={props.data ? props.data.facebook : "/"} className="social-icon">
                       <i className="fa fa-facebook"></i>
                     </a>
-                  </li>
-                  <li>
-                    <a href={props.data ? props.data.twitter : "/"}>
+                    <a href={props.data ? props.data.twitter : "/"} className="social-icon">
                       <i className="fa fa-twitter"></i>
                     </a>
-                  </li>
-                  <li>
-                    <a href={props.data ? props.data.youtube : "/"}>
+                    <a href={props.data ? props.data.youtube : "/"} className="social-icon">
                       <i className="fa fa-youtube"></i>
                     </a>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div id="footer">
-        <div className="container text-center">
+      </section>
+      
+      <footer className="bg-gray-800 text-white py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p>
-            &copy; 2023 Issaaf Kattan React Land Page Template. Design by{" "}
-            <a href="http://www.templatewire.com" rel="nofollow">
-              TemplateWire
-            </a>
+            &copy; 2024 Solutions N+1. Built with best practices and passion for excellence.
           </p>
         </div>
-      </div>
+      </footer>
     </div>
   );
 };

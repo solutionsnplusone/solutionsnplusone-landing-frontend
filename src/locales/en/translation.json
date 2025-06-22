@@ -1,0 +1,157 @@
+{
+  "navigation": {
+    "brand": "Solutions N+1",
+    "features": "Services",
+    "about": "About Us",
+    "services": "Expertise",
+    "gallery": "Portfolio",
+    "testimonials": "Testimonials",
+    "team": "Our Team",
+    "contact": "Contact"
+  },
+  "header": {
+    "title": "Boutique Software Development Excellence",
+    "paragraph": "We specialize in custom software solutions using best practices, proven design patterns, and rigorous testing to deliver scalable, robust applications that drive your business forward.",
+    "learnMore": "Discover Our Solutions"
+  },
+  "about": {
+    "paragraph": "Solutions N+1 is a boutique software development company based in Bogotá, Colombia, with 2 years of delivering exceptional custom solutions. We pride ourselves on using industry best practices, solid design patterns, comprehensive testing, and strict code guidelines to ensure every solution we build is scalable, maintainable, and robust. Our multi-paradigm approach means we choose the right technology for each unique challenge, ensuring optimal results for our clients.",
+    "whyChooseUs": "Why Choose Us?",
+    "why": [
+      "Best Practices & Code Quality",
+      "Scalable Architecture Design",
+      "Comprehensive Testing Coverage",
+      "Multi-Paradigm Technology Approach"
+    ],
+    "why2": [
+      "From Startups to Enterprise",
+      "2+ Years of Excellence",
+      "Proven Design Patterns",
+      "Boutique Personal Service"
+    ]
+  },
+  "gallery": {
+    "title": "Project Portfolio",
+    "subtitle": "Showcasing our successful projects and custom solutions built with cutting-edge technology and best practices."
+  },
+  "services": {
+    "title": "Our Expertise",
+    "subtitle": "We provide end-to-end software development services using the latest technologies and best practices to ensure your success.",
+    "items": [
+      {
+        "icon": "fa fa-code",
+        "name": "Custom Software Development",
+        "text": "Tailored software solutions built with clean, maintainable code following industry best practices and proven design patterns."
+      },
+      {
+        "icon": "fa fa-laptop",
+        "name": "Web Applications",
+        "text": "Modern, responsive web applications using cutting-edge frameworks and technologies for optimal performance and user experience."
+      },
+      {
+        "icon": "fa fa-mobile",
+        "name": "Mobile Applications",
+        "text": "Native and cross-platform mobile apps designed for performance, scalability, and exceptional user engagement."
+      },
+      {
+        "icon": "fa fa-cloud",
+        "name": "Cloud Solutions",
+        "text": "Scalable cloud infrastructure and applications leveraging AWS, Azure, and Google Cloud for maximum reliability and performance."
+      },
+      {
+        "icon": "fa fa-cogs",
+        "name": "DevOps & Infrastructure",
+        "text": "Automated deployment pipelines, containerization, and infrastructure as code to ensure reliable, scalable operations."
+      },
+      {
+        "icon": "fa fa-lightbulb-o",
+        "name": "Technical Consulting",
+        "text": "Strategic technology guidance, architecture reviews, and best practice implementation to optimize your development processes."
+      }
+    ]
+  },
+  "testimonialsTitle": "What Our Clients Say",
+  "testimonials": [
+    {
+      "text": "\"Solutions N+1 delivered a robust, scalable platform that exceeded our expectations. Their attention to code quality and best practices is exceptional.\"",
+      "name": "Maria Rodriguez"
+    },
+    {
+      "text": "\"The team's multi-paradigm approach helped us choose the perfect technology stack. The solution is both powerful and maintainable.\"",
+      "name": "Carlos Mendez"
+    },
+    {
+      "text": "\"Outstanding architecture design and implementation. They built our system to scale from startup to enterprise level seamlessly.\"",
+      "name": "Ana Gutierrez"
+    },
+    {
+      "text": "\"Their testing coverage and code quality standards are remarkable. We've had zero critical issues since launch.\"",
+      "name": "Diego Fernandez"
+    },
+    {
+      "text": "\"Solutions N+1 combines technical excellence with exceptional service. They truly understand business needs and deliver accordingly.\"",
+      "name": "Laura Campos"
+    },
+    {
+      "text": "\"The boutique approach means personalized attention and solutions tailored exactly to our requirements. Highly recommended.\"",
+      "name": "Ricardo Torres"
+    }
+  ],
+  "teamTitle": "Meet the Team",
+  "teamSubtitle": "Our passionate team of experts bringing your vision to life with cutting-edge technology and best practices.",
+  "team": [
+    {
+      "name": "Luis Ortega",
+      "job": "Founder & Co-CEO"
+    },
+    {
+      "name": "Cesar Bianco",
+      "job": "Founder & Co-CEO"
+    },
+    {
+      "name": "Felix Bejarano",
+      "job": "Software Architect & Team Lead"
+    },
+    {
+      "name": "Omerin Otamendi",
+      "job": "Business Growth & Marketing"
+    }
+  ],
+  "contact": {
+    "address": "Bogotá, Colombia",
+    "phone": "+57 (XXX) XXX-XXXX",
+    "email": "contact@solutionsnplusone.com",
+    "title": "Get In Touch",
+    "subtitle": "Ready to transform your ideas into exceptional software solutions? Contact our team of experts today.",
+    "contactInfo": "Contact Info",
+    "addressLabel": "Address",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "namePlaceholder": "Name",
+    "emailPlaceholder": "Email", 
+    "messagePlaceholder": "Message",
+    "sendMessage": "Send Message"
+  },
+  "features": [
+    {
+      "icon": "fa fa-check-circle",
+      "title": "Quality First",
+      "text": "Every line of code follows strict quality standards with comprehensive testing and code reviews to ensure reliability."
+    },
+    {
+      "icon": "fa fa-rocket",
+      "title": "Scalable Solutions",
+      "text": "Built to grow with your business using proven architecture patterns and scalable design principles."
+    },
+    {
+      "icon": "fa fa-users",
+      "title": "Expert Team",
+      "text": "Experienced professionals specializing in best practices, design patterns, and cutting-edge technologies."
+    },
+    {
+      "icon": "fa fa-globe",
+      "title": "Multi-Paradigm Approach",
+      "text": "We choose the right technology for each challenge, ensuring optimal solutions for every project."
+    }
+  ]
+} 
