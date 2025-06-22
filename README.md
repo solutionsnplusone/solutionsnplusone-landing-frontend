@@ -1,6 +1,6 @@
 # Solutions N+1 Landing Page
 
-**Forked from [React Landing Page Template](https://github.com/issaafalkattan/react-landing-page-template-2021) by Issaaf Kattan**
+**Forked from [React Landing Page Template](https://github.com/issaafalkattan/React-Landing-Page-Template) by Issaaf Kattan**
 
 ### <a href="https://react-landing-page-template-93ne.vercel.app/">LIVE DEMO</a> 
 
@@ -38,7 +38,7 @@ This project is automatically deployed using GitHub Actions to GitHub Pages when
 ## Credits & Attribution
 
 ### Original Template
-This project is forked from the [React Landing Page Template](https://github.com/issaafalkattan/react-landing-page-template-2021) created by **Issaaf Kattan**.
+This project is forked from the [React Landing Page Template](https://github.com/issaafalkattan/React-Landing-Page-Template) created by **Issaaf Kattan**.
 
 ### Design Inspiration
 Original design inspired by a template from <a href="https://www.free-css.com/assets/files/free-css-templates/preview/page234/interact/">Free-CSS.com</a>
