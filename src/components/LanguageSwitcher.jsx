@@ -9,19 +9,28 @@ export const LanguageSwitcher = () => {
   };
 
   return (
-    <div className="language-switcher">
+    <div className="language-switcher flex space-x-2">
       <button
-        className={`btn btn-sm ${i18n.language === 'en' ? 'btn-primary' : 'btn-outline-primary'}`}
+        className={`px-3 py-2 rounded-lg text-xl transition-all duration-300 transform hover:scale-110 ${
+          i18n.language === 'en' 
+            ? 'bg-white shadow-lg ring-2 ring-primary' 
+            : 'bg-white bg-opacity-20 hover:bg-opacity-30'
+        }`}
         onClick={() => changeLanguage('en')}
-        style={{ marginRight: '5px' }}
+        title="English"
       >
-        EN
+        🇺🇸
       </button>
       <button
-        className={`btn btn-sm ${i18n.language === 'es' ? 'btn-primary' : 'btn-outline-primary'}`}
+        className={`px-3 py-2 rounded-lg text-xl transition-all duration-300 transform hover:scale-110 ${
+          i18n.language === 'es' 
+            ? 'bg-white shadow-lg ring-2 ring-primary' 
+            : 'bg-white bg-opacity-20 hover:bg-opacity-30'
+        }`}
         onClick={() => changeLanguage('es')}
+        title="Español"
       >
-        ES
+        🇪🇸
       </button>
     </div>
   );

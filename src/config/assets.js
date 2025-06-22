@@ -1,4 +1,5 @@
 export const assets = {
+  logo: "img/logo.jpg",
   gallery: [
     {
       largeImage: "img/portfolio/01-large.jpg",

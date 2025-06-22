@@ -6,30 +6,35 @@ export const Testimonials = (props) => {
   const testimonials = t('testimonials', { returnObjects: true });
   
   return (
-    <div id="testimonials">
-      <div className="container">
-        <div className="section-title text-center">
-          <h2>{t('testimonialsTitle')}</h2>
+    <section id="testimonials" className="py-16 lg:py-24 bg-primary text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="section-title">
+          <h2 className="text-white">{t('testimonialsTitle')}</h2>
         </div>
-        <div className="row">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {props.data && testimonials
             ? props.data.map((asset, i) => (
-                <div key={`testimonial-${i}`} className="col-md-4">
-                  <div className="testimonial">
-                    <div className="testimonial-image">
-                      {" "}
-                      <img src={asset.img} alt="" />{" "}
-                    </div>
-                    <div className="testimonial-content">
-                      <p>{testimonials[i]?.text}</p>
-                      <div className="testimonial-meta"> - {testimonials[i]?.name} </div>
+                <div key={`testimonial-${i}`} className="testimonial-card animate-slide-up">
+                  <div className="flex flex-col items-center mb-6">
+                    <img 
+                      src={asset.img} 
+                      alt={testimonials[i]?.name} 
+                      className="w-16 h-16 rounded-full object-cover mb-4"
+                    />
+                    <div className="text-center">
+                      <p className="text-gray-700 italic mb-4 leading-relaxed">
+                        {testimonials[i]?.text}
+                      </p>
+                      <div className="font-bold text-primary">
+                        {testimonials[i]?.name}
+                      </div>
                     </div>
                   </div>
                 </div>
               ))
-            : "loading"}
+            : "Loading..."}
         </div>
       </div>
-    </div>
+    </section>
   );
 };

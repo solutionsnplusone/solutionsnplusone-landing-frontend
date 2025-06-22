@@ -1,13 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    @apply font-open-sans text-gray-800 leading-relaxed;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-raleway font-bold;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Custom component styles */
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105;
+  }
+  
+  .section-title {
+    @apply text-center mb-16;
+  }
+  
+  .section-title h2 {
+    @apply text-4xl font-bold text-gray-800 mb-4;
+  }
+  
+  .section-title p {
+    @apply text-lg text-gray-600 max-w-3xl mx-auto;
+  }
+  
+  .feature-card {
+    @apply bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 text-center;
+  }
+  
+  .service-card {
+    @apply bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 text-center border-t-4 border-primary;
+  }
+  
+  .testimonial-card {
+    @apply bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center;
+  }
+  
+  .team-card {
+    @apply bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden;
+  }
+  
+  .navbar-brand {
+    @apply flex items-center text-2xl font-bold text-white hover:text-gray-200 transition-colors duration-300;
+  }
+  
+  .nav-link {
+    @apply text-white hover:text-gray-200 transition-colors duration-300 font-medium;
+  }
+  
+  .hero-section {
+    @apply min-h-screen flex items-center justify-center relative bg-gradient-to-br from-primary via-primary-dark to-gray-900;
+  }
+  
+  .hero-overlay {
+    @apply absolute inset-0 bg-black bg-opacity-50;
+  }
+  
+  .hero-content {
+    @apply relative z-10 text-center text-white px-4;
+  }
+  
+  .contact-form {
+    @apply bg-white p-8 rounded-xl shadow-lg;
+  }
+  
+  .form-input {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300;
+  }
+  
+  .form-textarea {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 resize-none;
+  }
+  
+  .contact-info-item {
+    @apply flex items-center mb-4 text-gray-700;
+  }
+  
+  .social-icon {
+    @apply w-12 h-12 bg-primary hover:bg-primary-dark text-white rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110;
+  }
+  
+  .gallery-item {
+    @apply relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105;
+  }
+  
+  .gallery-overlay {
+    @apply absolute inset-0 bg-primary bg-opacity-0 hover:bg-opacity-80 transition-all duration-300 flex items-center justify-center;
+  }
+  
+  .language-switcher button {
+    @apply px-3 py-2 rounded-lg text-xl transition-all duration-300 transform hover:scale-110;
+  }
+  
+  .language-switcher button:hover {
+    @apply shadow-lg;
+  }
+}
+
+/* Custom animations */
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+  
+  .animate-slide-down {
+    animation: slideDown 0.8s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
