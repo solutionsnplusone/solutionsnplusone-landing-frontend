@@ -1,34 +1,50 @@
-# React JS Landing Page Template
+# Solutions N+1 Landing Page
 
-**
-
-# 🛎️🛎️ Good news! New & improved [V2](https://github.com/issaafalkattan/react-landing-page-template-2021) is out  
-
-**
-
+**Forked from [React Landing Page Template](https://github.com/issaafalkattan/react-landing-page-template-2021) by Issaaf Kattan**
 
 ### <a href="https://react-landing-page-template-93ne.vercel.app/">LIVE DEMO</a> 
 
 ## Description
-This is a ReactJS based landing page template, fit for a startup company/service with a one page view. The design is inspired by a template from <a href="https://www.free-css.com/assets/files/free-css-templates/preview/page234/interact/">Free-CSS.com </a>
-All 'visual' data can be easily modified by changing the data.json file.
+This is a ReactJS based landing page for Solutions N+1, customized from the original template by Issaaf Kattan. The design features a modern one-page view perfect for showcasing our services and company vision. All content can be easily modified through the translation files.
 
-## Make it Yours!
-### 1. Preps
-You will need to have <a href="https://nodejs.org/">Node JS</a> installed on your pc. 
+## Features
+- 📱 Responsive design
+- 🌐 Multi-language support (English/Spanish)
+- 🎨 Modern UI with Tailwind
+- 📧 Contact form integration with EmailJS
+- 🚀 Easy deployment with GitHub Actions
 
-### 2. Install Dependencies & Start
-After cloning the files, you will have to run ```npm install``` followed by ```npm start``` in the CLI
-### 3. Add your own data 
-The project now supports multiple languages! Modify translations in ```src/locales/``` and add any images to ```public/img/```
-You can also change styles by modifying the ```public/css``` files.
-If you need the contact form to work, you also need to create an EmailJS account, and modify the ```src/components/contact.jsx``` file to replace your own service ID, template ID and Public Key
+## Development Setup
+### 1. Prerequisites
+You will need to have <a href="https://nodejs.org/">Node JS</a> installed on your machine. 
 
-## Like this project?
-<a href="https://www.buymeacoffee.com/issaaf">Buy my a coffee ☕️</a>
+### 2. Install Dependencies & Start Development Server
+After cloning the repository:
+```bash
+npm install
+npm start
+```
 
-## Credits
-##### Free CSS 
-<a href="https://www.free-css.com/assets/files/free-css-templates/preview/page234/interact/">Free-CSS.com </a>
+### 3. Customize Content 
+The project supports multiple languages! 
+- Modify translations in `src/locales/en/translation.json` and `src/locales/es/translation.json`
+- Add images to `public/img/`
+- Customize styles in `public/css/` files
+- For the contact form to work, create an EmailJS account and update the configuration in `src/components/contact.jsx`
 
-##### Issaaf kattan
+## Deployment
+This project is automatically deployed using GitHub Actions to GitHub Pages when changes are pushed to the master branch.
+
+## Credits & Attribution
+
+### Original Template
+This project is forked from the [React Landing Page Template](https://github.com/issaafalkattan/react-landing-page-template-2021) created by **Issaaf Kattan**.
+
+### Design Inspiration
+Original design inspired by a template from <a href="https://www.free-css.com/assets/files/free-css-templates/preview/page234/interact/">Free-CSS.com</a>
+
+### Solutions N+1 Team
+Customized and maintained by the Solutions N+1 development team.
+
+## License
+This project maintains the same license as the original template.
