@@ -5,6 +5,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "caniuse-lite": "^1.0.30001724",
     "emailjs-com": "^2.6.4",
     "i18next": "^25.2.1",
     "i18next-browser-languagedetector": "^8.2.0",
