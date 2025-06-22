@@ -16,7 +16,7 @@ export const About = (props) => {
             <div className="about-text">
               <h2>{t('navigation.about')}</h2>
               <p>{t('about.paragraph')}</p>
-              <h3>Why Choose Us?</h3>
+              <h3>{t('about.whyChooseUs')}</h3>
               <div className="list-style">
                 <div className="col-lg-6 col-sm-6 col-xs-12">
                   <ul>

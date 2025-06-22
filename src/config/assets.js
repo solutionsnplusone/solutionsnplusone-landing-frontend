@@ -72,8 +72,8 @@ export const assets = {
     }
   ],
   social: {
-    facebook: "fb.com",
-    twitter: "twitter.com",
-    youtube: "youtube.com"
+    facebook: "https://www.facebook.com/solutionsnplusone",
+    twitter: "https://twitter.com/solutionsnplus1",
+    youtube: "https://www.youtube.com/@solutionsnplusone"
   }
 }; 
