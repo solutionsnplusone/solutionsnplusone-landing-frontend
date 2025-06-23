@@ -1,4 +1,6 @@
-export const assets = {
+import { Assets } from '../types';
+
+export const assets: Assets = {
   logo: "img/logo.jpg",
   gallery: [
     {

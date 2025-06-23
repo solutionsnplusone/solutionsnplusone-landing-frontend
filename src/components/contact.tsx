@@ -1,31 +1,32 @@
-import { useState } from "react";
+import React, { useState, ChangeEvent, FormEvent } from "react";
 import emailjs from "@emailjs/browser";
-import React from "react";
 import { useTranslation } from 'react-i18next';
+import { ContactProps, ContactFormState } from '../types';
 
-const initialState = {
+const initialState: ContactFormState = {
   name: "",
   email: "",
   message: "",
 };
 
-export const Contact = (props) => {
+export const Contact: React.FC<ContactProps> = ({ data }) => {
   const { t } = useTranslation();
-  const [{ name, email, message }, setState] = useState(initialState);
+  const [{ name, email, message }, setState] = useState<ContactFormState>(initialState);
 
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
     const { name, value } = e.target;
     setState((prevState) => ({ ...prevState, [name]: value }));
   };
-  const clearState = () => setState({ ...initialState });
+
+  const clearState = (): void => setState({ ...initialState });
   
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     console.log(name, email, message);
     
     // replace below with your own Service ID, Template ID and Public Key from your EmailJS account
     emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_PUBLIC_KEY")
+      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target as HTMLFormElement, "YOUR_PUBLIC_KEY")
       .then(
         (result) => {
           console.log(result.text);
@@ -79,12 +80,12 @@ export const Contact = (props) => {
                     name="message"
                     id="message"
                     className="form-textarea"
-                    rows="6"
+                    rows={6}
                     placeholder={t('contact.messagePlaceholder')}
                     required
                     onChange={handleChange}
                     value={message}
-                  ></textarea>
+                  />
                 </div>
                 <button type="submit" className="btn-primary">
                   {t('contact.sendMessage')}
@@ -97,7 +98,7 @@ export const Contact = (props) => {
                 <h3 className="text-2xl font-bold text-gray-800 mb-6">{t('contact.contactInfo')}</h3>
                 
                 <div className="contact-info-item">
-                  <i className="fa fa-map-marker text-primary mr-3"></i>
+                  <i className="fa fa-map-marker text-primary mr-3" />
                   <div>
                     <strong>{t('contact.addressLabel')}:</strong><br />
                     {t('contact.address')}
@@ -105,7 +106,7 @@ export const Contact = (props) => {
                 </div>
                 
                 <div className="contact-info-item">
-                  <i className="fa fa-phone text-primary mr-3"></i>
+                  <i className="fa fa-phone text-primary mr-3" />
                   <div>
                     <strong>{t('contact.phoneLabel')}:</strong><br />
                     {t('contact.phone')}
@@ -113,7 +114,7 @@ export const Contact = (props) => {
                 </div>
                 
                 <div className="contact-info-item">
-                  <i className="fa fa-envelope-o text-primary mr-3"></i>
+                  <i className="fa fa-envelope-o text-primary mr-3" />
                   <div>
                     <strong>{t('contact.emailLabel')}:</strong><br />
                     {t('contact.email')}
@@ -123,14 +124,14 @@ export const Contact = (props) => {
                 <div className="mt-8">
                   <h4 className="text-lg font-bold text-gray-800 mb-4">Follow Us</h4>
                   <div className="flex space-x-4">
-                    <a href={props.data ? props.data.facebook : "/"} className="social-icon">
-                      <i className="fa fa-facebook"></i>
+                    <a href={data?.facebook || "/"} className="social-icon">
+                      <i className="fa fa-facebook" />
                     </a>
-                    <a href={props.data ? props.data.twitter : "/"} className="social-icon">
-                      <i className="fa fa-twitter"></i>
+                    <a href={data?.twitter || "/"} className="social-icon">
+                      <i className="fa fa-twitter" />
                     </a>
-                    <a href={props.data ? props.data.youtube : "/"} className="social-icon">
-                      <i className="fa fa-youtube"></i>
+                    <a href={data?.youtube || "/"} className="social-icon">
+                      <i className="fa fa-youtube" />
                     </a>
                   </div>
                 </div>
@@ -149,4 +150,4 @@ export const Contact = (props) => {
       </footer>
     </div>
   );
-};
+}; 

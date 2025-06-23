@@ -2,10 +2,23 @@ import React, { useState } from "react";
 import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { assets } from '../config/assets';
+import { NavigationProps } from '../types';
 
-export const Navigation = (props) => {
+export const Navigation: React.FC<NavigationProps> = () => {
   const { t } = useTranslation();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  
+  const toggleMenu = (): void => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = (): void => {
+    setIsMenuOpen(false);
+  };
+
+  const handleNavClick = (): void => {
+    closeMenu();
+  };
   
   return (
     <nav className="fixed top-0 left-0 right-0 bg-primary shadow-lg z-50">
@@ -52,8 +65,9 @@ export const Navigation = (props) => {
           {/* Mobile menu button */}
           <div className="lg:hidden">
             <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={toggleMenu}
               className="text-white hover:text-gray-200 focus:outline-none focus:text-gray-200 transition-colors duration-300"
+              aria-label="Toggle navigation menu"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isMenuOpen ? (
@@ -73,49 +87,49 @@ export const Navigation = (props) => {
               <a 
                 href="#features" 
                 className="block px-3 py-2 text-white hover:text-gray-200 hover:bg-primary-light rounded-md transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={handleNavClick}
               >
                 {t('navigation.features')}
               </a>
               <a 
                 href="#about" 
                 className="block px-3 py-2 text-white hover:text-gray-200 hover:bg-primary-light rounded-md transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={handleNavClick}
               >
                 {t('navigation.about')}
               </a>
               <a 
                 href="#services" 
                 className="block px-3 py-2 text-white hover:text-gray-200 hover:bg-primary-light rounded-md transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={handleNavClick}
               >
                 {t('navigation.services')}
               </a>
               <a 
                 href="#portfolio" 
                 className="block px-3 py-2 text-white hover:text-gray-200 hover:bg-primary-light rounded-md transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={handleNavClick}
               >
                 {t('navigation.gallery')}
               </a>
               <a 
                 href="#testimonials" 
                 className="block px-3 py-2 text-white hover:text-gray-200 hover:bg-primary-light rounded-md transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={handleNavClick}
               >
                 {t('navigation.testimonials')}
               </a>
               <a 
                 href="#team" 
                 className="block px-3 py-2 text-white hover:text-gray-200 hover:bg-primary-light rounded-md transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={handleNavClick}
               >
                 {t('navigation.team')}
               </a>
               <a 
                 href="#contact" 
                 className="block px-3 py-2 text-white hover:text-gray-200 hover:bg-primary-light rounded-md transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={handleNavClick}
               >
                 {t('navigation.contact')}
               </a>
@@ -128,4 +142,4 @@ export const Navigation = (props) => {
       </div>
     </nav>
   );
-};
+}; 

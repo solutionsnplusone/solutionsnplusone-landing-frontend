@@ -12,12 +12,13 @@ import { assets } from "./config/assets";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
 
-export const scroll = new SmoothScroll('a[href*="#"]', {
+// Initialize smooth scroll with proper typing
+export const scroll: SmoothScroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
   speedAsDuration: true,
 });
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <div>
       <Navigation />
@@ -25,12 +26,12 @@ const App = () => {
       <Features />
       <About />
       <Services />
-      <Gallery data={assets.gallery} />
-      <Testimonials data={assets.testimonials} />
-      <Team data={assets.team} />
+      <Gallery data={{ images: assets.gallery }} />
+      <Testimonials data={{ testimonials: assets.testimonials }} />
+      <Team data={{ team: assets.team }} />
       <Contact data={assets.social} />
     </div>
   );
 };
 
-export default App;
+export default App; 

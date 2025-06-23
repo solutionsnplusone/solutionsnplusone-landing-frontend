@@ -5,7 +5,13 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import enTranslations from './locales/en/translation.json';
 import esTranslations from './locales/es/translation.json';
 
-const resources = {
+interface Resources {
+  [key: string]: {
+    translation: typeof enTranslations;
+  };
+}
+
+const resources: Resources = {
   en: {
     translation: enTranslations
   },
@@ -20,8 +26,7 @@ i18n
   .init({
     resources,
     fallbackLng: 'en',
-    debug: true,
-
+    debug: process.env.NODE_ENV === 'development',
     interpolation: {
       escapeValue: false
     }
