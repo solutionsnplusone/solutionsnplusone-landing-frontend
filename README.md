@@ -2,7 +2,7 @@
 
 **Forked from [React Landing Page Template](https://github.com/issaafalkattan/React-Landing-Page-Template) by Issaaf Kattan**
 
-### <a href="https://react-landing-page-template-93ne.vercel.app/">LIVE DEMO</a> 
+### <a href="https://solutionsnplusone.github.io/solutionsnplusone-landing-frontend/">LIVE DEMO</a> 
 
 ## Description
 This is a ReactJS based landing page for Solutions N+1, customized from the original template by Issaaf Kattan. The design features a modern one-page view perfect for showcasing our services and company vision. All content can be easily modified through the translation files.
