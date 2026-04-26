@@ -44,18 +44,18 @@ export const Contact: React.FC<ContactProps> = ({ data }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
-              <div className="section-title text-left">
+              <div className="mb-16 text-left">
                 <h2>{t('contact.title')}</h2>
                 <p>{t('contact.subtitle')}</p>
               </div>
-              <form name="sentMessage" onSubmit={handleSubmit} className="contact-form">
+              <form name="sentMessage" onSubmit={handleSubmit} className="bg-white p-8 rounded-xl shadow-lg">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
                     <input
                       type="text"
                       id="name"
                       name="name"
-                      className="form-input"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
                       placeholder={t('contact.namePlaceholder')}
                       required
                       onChange={handleChange}
@@ -67,7 +67,7 @@ export const Contact: React.FC<ContactProps> = ({ data }) => {
                       type="email"
                       id="email"
                       name="email"
-                      className="form-input"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
                       placeholder={t('contact.emailPlaceholder')}
                       required
                       onChange={handleChange}
@@ -79,7 +79,7 @@ export const Contact: React.FC<ContactProps> = ({ data }) => {
                   <textarea
                     name="message"
                     id="message"
-                    className="form-textarea"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 resize-none"
                     rows={6}
                     placeholder={t('contact.messagePlaceholder')}
                     required
@@ -87,7 +87,7 @@ export const Contact: React.FC<ContactProps> = ({ data }) => {
                     value={message}
                   />
                 </div>
-                <button type="submit" className="btn-primary">
+                <button type="submit" className="bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                   {t('contact.sendMessage')}
                 </button>
               </form>
@@ -97,7 +97,7 @@ export const Contact: React.FC<ContactProps> = ({ data }) => {
               <div className="bg-white p-8 rounded-xl shadow-lg">
                 <h3 className="text-2xl font-bold text-gray-800 mb-6">{t('contact.contactInfo')}</h3>
                 
-                <div className="contact-info-item">
+                <div className="flex items-center mb-4 text-gray-700">
                   <i className="fa fa-map-marker text-primary mr-3" />
                   <div>
                     <strong>{t('contact.addressLabel')}:</strong><br />
@@ -105,7 +105,7 @@ export const Contact: React.FC<ContactProps> = ({ data }) => {
                   </div>
                 </div>
                 
-                <div className="contact-info-item">
+                <div className="flex items-center mb-4 text-gray-700">
                   <i className="fa fa-phone text-primary mr-3" />
                   <div>
                     <strong>{t('contact.phoneLabel')}:</strong><br />
@@ -113,7 +113,7 @@ export const Contact: React.FC<ContactProps> = ({ data }) => {
                   </div>
                 </div>
                 
-                <div className="contact-info-item">
+                <div className="flex items-center mb-4 text-gray-700">
                   <i className="fa fa-envelope-o text-primary mr-3" />
                   <div>
                     <strong>{t('contact.emailLabel')}:</strong><br />
@@ -124,13 +124,13 @@ export const Contact: React.FC<ContactProps> = ({ data }) => {
                 <div className="mt-8">
                   <h4 className="text-lg font-bold text-gray-800 mb-4">Follow Us</h4>
                   <div className="flex space-x-4">
-                    <a href={data?.facebook || "/"} className="social-icon">
+                    <a href={data?.facebook || "/"} className="w-12 h-12 bg-primary hover:bg-primary-dark text-white rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
                       <i className="fa fa-facebook" />
                     </a>
-                    <a href={data?.twitter || "/"} className="social-icon">
+                    <a href={data?.twitter || "/"} className="w-12 h-12 bg-primary hover:bg-primary-dark text-white rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
                       <i className="fa fa-twitter" />
                     </a>
-                    <a href={data?.youtube || "/"} className="social-icon">
+                    <a href={data?.youtube || "/"} className="w-12 h-12 bg-primary hover:bg-primary-dark text-white rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
                       <i className="fa fa-youtube" />
                     </a>
                   </div>

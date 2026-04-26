@@ -10,7 +10,6 @@ import { Team } from "./components/Team";
 import { Contact } from "./components/contact";
 import { assets } from "./config/assets";
 import SmoothScroll from "smooth-scroll";
-import "./App.css";
 
 // Initialize smooth scroll with proper typing
 export const scroll: SmoothScroll = new SmoothScroll('a[href*="#"]', {

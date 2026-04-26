@@ -26,7 +26,7 @@ export const Navigation: React.FC<NavigationProps> = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo and Brand */}
           <div className="flex items-center">
-            <a href="#page-top" className="navbar-brand">
+            <a href="#page-top" className="flex items-center text-2xl font-bold text-white hover:text-gray-200 transition-colors duration-300">
               <img 
                 src={assets.logo} 
                 alt="Solutions N+1 Logo" 
@@ -38,25 +38,25 @@ export const Navigation: React.FC<NavigationProps> = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <a href="#features" className="nav-link">
+            <a href="#features" className="text-white hover:text-gray-200 transition-colors duration-300 font-medium">
               {t('navigation.features')}
             </a>
-            <a href="#about" className="nav-link">
+            <a href="#about" className="text-white hover:text-gray-200 transition-colors duration-300 font-medium">
               {t('navigation.about')}
             </a>
-            <a href="#services" className="nav-link">
+            <a href="#services" className="text-white hover:text-gray-200 transition-colors duration-300 font-medium">
               {t('navigation.services')}
             </a>
-            <a href="#portfolio" className="nav-link">
+            <a href="#portfolio" className="text-white hover:text-gray-200 transition-colors duration-300 font-medium">
               {t('navigation.gallery')}
             </a>
-            <a href="#testimonials" className="nav-link">
+            <a href="#testimonials" className="text-white hover:text-gray-200 transition-colors duration-300 font-medium">
               {t('navigation.testimonials')}
             </a>
-            <a href="#team" className="nav-link">
+            <a href="#team" className="text-white hover:text-gray-200 transition-colors duration-300 font-medium">
               {t('navigation.team')}
             </a>
-            <a href="#contact" className="nav-link">
+            <a href="#contact" className="text-white hover:text-gray-200 transition-colors duration-300 font-medium">
               {t('navigation.contact')}
             </a>
             <LanguageSwitcher />

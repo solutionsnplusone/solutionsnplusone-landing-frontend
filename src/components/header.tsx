@@ -19,7 +19,7 @@ export const Header: React.FC<HeaderProps> = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#features"
-              className="btn-primary bg-white text-primary hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+              className="font-semibold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl bg-white text-primary hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
             >
               {t('header.learnMore')}
             </a>
