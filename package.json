@@ -1,5 +1,6 @@
 {
   "name": "solutionsnplusone-landing-frontend",
+  "type": "module",
   "homepage": "https://solutionsnplusone.github.io/solutionsnplusone-landing-frontend",
   "private": true,
   "dependencies": {
