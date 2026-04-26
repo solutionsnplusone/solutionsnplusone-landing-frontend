@@ -10,7 +10,7 @@ export const About = (props) => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-up">
             <img 
-              src="img/about.jpg" 
+              src={`${process.env.PUBLIC_URL}/img/about.jpg`}
               className="w-full h-auto rounded-xl shadow-lg" 
               alt="About Solutions N+1" 
             />
