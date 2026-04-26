@@ -11,12 +11,19 @@
   },
   "header": {
     "title": "Boutique Software Development Excellence",
+    "subtitle": "We specialize in custom software solutions using best practices, proven design patterns, and rigorous testing to deliver scalable, robust applications that drive your business forward.",
     "paragraph": "We specialize in custom software solutions using best practices, proven design patterns, and rigorous testing to deliver scalable, robust applications that drive your business forward.",
-    "learnMore": "Discover Our Solutions"
+    "learnMore": "Discover Our Solutions",
+    "getStarted": "Get Started"
   },
   "about": {
+    "title": "About Solutions N+1",
     "paragraph": "Solutions N+1 is a boutique software development company based in Bogotá, Colombia, with 2 years of delivering exceptional custom solutions. We pride ourselves on using industry best practices, solid design patterns, comprehensive testing, and strict code guidelines to ensure every solution we build is scalable, maintainable, and robust. Our multi-paradigm approach means we choose the right technology for each unique challenge, ensuring optimal results for our clients.",
     "whyChooseUs": "Why Choose Us?",
+    "reason1": "Best Practices & Code Quality",
+    "reason2": "Scalable Architecture Design",
+    "reason3": "Comprehensive Testing Coverage",
+    "reason4": "Multi-Paradigm Technology Approach",
     "why": [
       "Best Practices & Code Quality",
       "Scalable Architecture Design",
@@ -30,6 +37,22 @@
       "Boutique Personal Service"
     ]
   },
+  "features": {
+    "title": "Why Choose Us",
+    "subtitle": "We combine technical excellence with business understanding to deliver solutions that truly make a difference.",
+    "feature1": {
+      "title": "Quality First",
+      "description": "Every line of code follows strict quality standards with comprehensive testing and code reviews to ensure reliability."
+    },
+    "feature2": {
+      "title": "Scalable Solutions",
+      "description": "Built to grow with your business using proven architecture patterns and scalable design principles."
+    },
+    "feature3": {
+      "title": "Expert Team",
+      "description": "Experienced professionals specializing in best practices, design patterns, and cutting-edge technologies."
+    }
+  },
   "gallery": {
     "title": "Project Portfolio",
     "subtitle": "Showcasing our successful projects and custom solutions built with cutting-edge technology and best practices."
@@ -37,6 +60,18 @@
   "services": {
     "title": "Our Expertise",
     "subtitle": "We provide end-to-end software development services using the latest technologies and best practices to ensure your success.",
+    "webDevelopment": {
+      "title": "Custom Software Development",
+      "description": "Tailored software solutions built with clean, maintainable code following industry best practices and proven design patterns."
+    },
+    "mobileDevelopment": {
+      "title": "Mobile Applications",
+      "description": "Native and cross-platform mobile apps designed for performance, scalability, and exceptional user engagement."
+    },
+    "consulting": {
+      "title": "Technical Consulting",
+      "description": "Strategic technology guidance, architecture reviews, and best practice implementation to optimize your development processes."
+    },
     "items": [
       {
         "icon": "fa fa-code",
@@ -70,53 +105,30 @@
       }
     ]
   },
-  "testimonialsTitle": "What Our Clients Say",
-  "testimonials": [
-    {
-      "text": "\"Solutions N+1 delivered a robust, scalable platform that exceeded our expectations. Their attention to code quality and best practices is exceptional.\"",
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Don't just take our word for it — hear from the companies we've helped succeed.",
+    "testimonial1": {
+      "text": "Solutions N+1 delivered a robust, scalable platform that exceeded our expectations. Their attention to code quality and best practices is exceptional.",
       "name": "Maria Rodriguez"
     },
-    {
-      "text": "\"The team's multi-paradigm approach helped us choose the perfect technology stack. The solution is both powerful and maintainable.\"",
+    "testimonial2": {
+      "text": "The team's multi-paradigm approach helped us choose the perfect technology stack. The solution is both powerful and maintainable.",
       "name": "Carlos Mendez"
     },
-    {
-      "text": "\"Outstanding architecture design and implementation. They built our system to scale from startup to enterprise level seamlessly.\"",
+    "testimonial3": {
+      "text": "Outstanding architecture design and implementation. They built our system to scale from startup to enterprise level seamlessly.",
       "name": "Ana Gutierrez"
-    },
-    {
-      "text": "\"Their testing coverage and code quality standards are remarkable. We've had zero critical issues since launch.\"",
-      "name": "Diego Fernandez"
-    },
-    {
-      "text": "\"Solutions N+1 combines technical excellence with exceptional service. They truly understand business needs and deliver accordingly.\"",
-      "name": "Laura Campos"
-    },
-    {
-      "text": "\"The boutique approach means personalized attention and solutions tailored exactly to our requirements. Highly recommended.\"",
-      "name": "Ricardo Torres"
     }
-  ],
-  "teamTitle": "Meet the Team",
-  "teamSubtitle": "Our passionate team of experts bringing your vision to life with cutting-edge technology and best practices.",
-  "team": [
-    {
-      "name": "Luis Ortega",
-      "job": "Founder & Co-CEO"
-    },
-    {
-      "name": "Cesar Bianco",
-      "job": "Founder & Co-CEO"
-    },
-    {
-      "name": "Felix Bejarano",
-      "job": "Software Architect & Team Lead"
-    },
-    {
-      "name": "Omerin Otamendi",
-      "job": "Business Growth & Marketing"
-    }
-  ],
+  },
+  "team": {
+    "title": "Meet the Team",
+    "subtitle": "Our passionate team of experts bringing your vision to life with cutting-edge technology and best practices.",
+    "member1": { "name": "Luis Ortega", "job": "Founder & Co-CEO" },
+    "member2": { "name": "Cesar Bianco", "job": "Founder & Co-CEO" },
+    "member3": { "name": "Felix Bejarano", "job": "Software Architect & Team Lead" },
+    "member4": { "name": "Omerin Otamendi", "job": "Business Growth & Marketing" }
+  },
   "contact": {
     "address": "Bogotá, Colombia",
     "phone": "+57 (XXX) XXX-XXXX",
@@ -128,30 +140,8 @@
     "phoneLabel": "Phone",
     "emailLabel": "Email",
     "namePlaceholder": "Name",
-    "emailPlaceholder": "Email", 
+    "emailPlaceholder": "Email",
     "messagePlaceholder": "Message",
     "sendMessage": "Send Message"
-  },
-  "features": [
-    {
-      "icon": "fa fa-check-circle",
-      "title": "Quality First",
-      "text": "Every line of code follows strict quality standards with comprehensive testing and code reviews to ensure reliability."
-    },
-    {
-      "icon": "fa fa-rocket",
-      "title": "Scalable Solutions",
-      "text": "Built to grow with your business using proven architecture patterns and scalable design principles."
-    },
-    {
-      "icon": "fa fa-users",
-      "title": "Expert Team",
-      "text": "Experienced professionals specializing in best practices, design patterns, and cutting-edge technologies."
-    },
-    {
-      "icon": "fa fa-globe",
-      "title": "Multi-Paradigm Approach",
-      "text": "We choose the right technology for each challenge, ensuring optimal solutions for every project."
-    }
-  ]
-} 
+  }
+}

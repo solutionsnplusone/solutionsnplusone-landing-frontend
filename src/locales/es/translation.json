@@ -11,12 +11,19 @@
   },
   "header": {
     "title": "Excelencia en Desarrollo de Software Boutique",
+    "subtitle": "Nos especializamos en soluciones de software personalizadas utilizando mejores prácticas, patrones de diseño probados y pruebas rigurosas para entregar aplicaciones escalables y robustas que impulsen tu negocio.",
     "paragraph": "Nos especializamos en soluciones de software personalizadas utilizando mejores prácticas, patrones de diseño probados y pruebas rigurosas para entregar aplicaciones escalables y robustas que impulsen tu negocio.",
-    "learnMore": "Descubre Nuestras Soluciones"
+    "learnMore": "Descubre Nuestras Soluciones",
+    "getStarted": "Comenzar"
   },
   "about": {
+    "title": "Sobre Solutions N+1",
     "paragraph": "Solutions N+1 es una empresa boutique de desarrollo de software con sede en Bogotá, Colombia, con 2 años entregando soluciones personalizadas excepcionales. Nos enorgullecemos de utilizar las mejores prácticas de la industria, patrones de diseño sólidos, pruebas exhaustivas y pautas estrictas de código para garantizar que cada solución que construimos sea escalable, mantenible y robusta. Nuestro enfoque multi-paradigma significa que elegimos la tecnología adecuada para cada desafío único, asegurando resultados óptimos para nuestros clientes.",
     "whyChooseUs": "¿Por Qué Elegirnos?",
+    "reason1": "Mejores Prácticas y Calidad de Código",
+    "reason2": "Diseño de Arquitectura Escalable",
+    "reason3": "Cobertura de Pruebas Exhaustiva",
+    "reason4": "Enfoque Tecnológico Multi-Paradigma",
     "why": [
       "Mejores Prácticas y Calidad de Código",
       "Diseño de Arquitectura Escalable",
@@ -30,6 +37,22 @@
       "Servicio Personal Boutique"
     ]
   },
+  "features": {
+    "title": "Por Qué Elegirnos",
+    "subtitle": "Combinamos excelencia técnica con comprensión del negocio para entregar soluciones que realmente marcan la diferencia.",
+    "feature1": {
+      "title": "Calidad Primero",
+      "description": "Cada línea de código sigue estándares estrictos de calidad con pruebas exhaustivas y revisiones de código para garantizar confiabilidad."
+    },
+    "feature2": {
+      "title": "Soluciones Escalables",
+      "description": "Construidas para crecer con tu negocio utilizando patrones de arquitectura probados y principios de diseño escalable."
+    },
+    "feature3": {
+      "title": "Equipo Experto",
+      "description": "Profesionales experimentados especializados en mejores prácticas, patrones de diseño y tecnologías de vanguardia."
+    }
+  },
   "gallery": {
     "title": "Portafolio de Proyectos",
     "subtitle": "Mostrando nuestros proyectos exitosos y soluciones personalizadas construidas con tecnología de vanguardia y mejores prácticas."
@@ -37,6 +60,18 @@
   "services": {
     "title": "Nuestra Experiencia",
     "subtitle": "Proporcionamos servicios completos de desarrollo de software utilizando las últimas tecnologías y mejores prácticas para asegurar tu éxito.",
+    "webDevelopment": {
+      "title": "Desarrollo de Software Personalizado",
+      "description": "Soluciones de software a medida construidas con código limpio y mantenible siguiendo las mejores prácticas de la industria y patrones de diseño probados."
+    },
+    "mobileDevelopment": {
+      "title": "Aplicaciones Móviles",
+      "description": "Aplicaciones móviles nativas y multiplataforma diseñadas para rendimiento, escalabilidad y participación excepcional del usuario."
+    },
+    "consulting": {
+      "title": "Consultoría Técnica",
+      "description": "Orientación estratégica en tecnología, revisiones de arquitectura e implementación de mejores prácticas para optimizar tus procesos de desarrollo."
+    },
     "items": [
       {
         "icon": "fa fa-code",
@@ -70,53 +105,30 @@
       }
     ]
   },
-  "testimonialsTitle": "Lo Que Dicen Nuestros Clientes",
-  "testimonials": [
-    {
-      "text": "\"Solutions N+1 entregó una plataforma robusta y escalable que superó nuestras expectativas. Su atención a la calidad del código y mejores prácticas es excepcional.\"",
+  "testimonials": {
+    "title": "Lo Que Dicen Nuestros Clientes",
+    "subtitle": "No solo tome nuestra palabra — escuche de las empresas que hemos ayudado a tener éxito.",
+    "testimonial1": {
+      "text": "Solutions N+1 entregó una plataforma robusta y escalable que superó nuestras expectativas. Su atención a la calidad del código y mejores prácticas es excepcional.",
       "name": "María Rodríguez"
     },
-    {
-      "text": "\"El enfoque multi-paradigma del equipo nos ayudó a elegir el stack tecnológico perfecto. La solución es poderosa y mantenible.\"",
+    "testimonial2": {
+      "text": "El enfoque multi-paradigma del equipo nos ayudó a elegir el stack tecnológico perfecto. La solución es poderosa y mantenible.",
       "name": "Carlos Méndez"
     },
-    {
-      "text": "\"Diseño e implementación de arquitectura sobresalientes. Construyeron nuestro sistema para escalar desde startup hasta nivel empresarial sin problemas.\"",
+    "testimonial3": {
+      "text": "Diseño e implementación de arquitectura sobresalientes. Construyeron nuestro sistema para escalar desde startup hasta nivel empresarial sin problemas.",
       "name": "Ana Gutiérrez"
-    },
-    {
-      "text": "\"Su cobertura de pruebas y estándares de calidad de código son extraordinarios. No hemos tenido problemas críticos desde el lanzamiento.\"",
-      "name": "Diego Fernández"
-    },
-    {
-      "text": "\"Solutions N+1 combina excelencia técnica con servicio excepcional. Realmente entienden las necesidades del negocio y entregan en consecuencia.\"",
-      "name": "Laura Campos"
-    },
-    {
-      "text": "\"El enfoque boutique significa atención personalizada y soluciones adaptadas exactamente a nuestros requerimientos. Altamente recomendado.\"",
-      "name": "Ricardo Torres"
     }
-  ],
-  "teamTitle": "Conoce al Equipo",
-  "teamSubtitle": "Nuestro equipo apasionado de expertos dando vida a tu visión con tecnología de vanguardia y mejores prácticas.",
-  "team": [
-    {
-      "name": "Luis Ortega",
-      "job": "Fundador y Co-CEO"
-    },
-    {
-      "name": "César Bianco",
-      "job": "Fundador y Co-CEO"
-    },
-    {
-      "name": "Félix Bejarano",
-      "job": "Arquitecto de Software y Líder de Equipo"
-    },
-    {
-      "name": "Omerin Otamendi",
-      "job": "Crecimiento de Negocio y Marketing"
-    }
-  ],
+  },
+  "team": {
+    "title": "Conoce al Equipo",
+    "subtitle": "Nuestro equipo apasionado de expertos dando vida a tu visión con tecnología de vanguardia y mejores prácticas.",
+    "member1": { "name": "Luis Ortega", "job": "Fundador y Co-CEO" },
+    "member2": { "name": "César Bianco", "job": "Fundador y Co-CEO" },
+    "member3": { "name": "Félix Bejarano", "job": "Arquitecto de Software y Líder de Equipo" },
+    "member4": { "name": "Omerin Otamendi", "job": "Crecimiento de Negocio y Marketing" }
+  },
   "contact": {
     "address": "Bogotá, Colombia",
     "phone": "+57 (XXX) XXX-XXXX",
@@ -131,27 +143,5 @@
     "emailPlaceholder": "Email",
     "messagePlaceholder": "Mensaje",
     "sendMessage": "Enviar Mensaje"
-  },
-  "features": [
-    {
-      "icon": "fa fa-check-circle",
-      "title": "Calidad Primero",
-      "text": "Cada línea de código sigue estándares estrictos de calidad con pruebas exhaustivas y revisiones de código para garantizar confiabilidad."
-    },
-    {
-      "icon": "fa fa-rocket",
-      "title": "Soluciones Escalables",
-      "text": "Construidas para crecer con tu negocio utilizando patrones de arquitectura probados y principios de diseño escalable."
-    },
-    {
-      "icon": "fa fa-users",
-      "title": "Equipo Experto",
-      "text": "Profesionales experimentados especializados en mejores prácticas, patrones de diseño y tecnologías de vanguardia."
-    },
-    {
-      "icon": "fa fa-globe",
-      "title": "Enfoque Multi-Paradigma",
-      "text": "Elegimos la tecnología adecuada para cada desafío, asegurando soluciones óptimas para cada proyecto."
-    }
-  ]
-} 
+  }
+}
