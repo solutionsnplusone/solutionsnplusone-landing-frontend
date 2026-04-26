@@ -25,7 +25,7 @@ export const Header: React.FC<HeaderProps> = () => {
             </a>
             <a
               href="#contact"
-              className="btn-secondary border-2 border-white text-white hover:bg-white hover:text-primary transition-all duration-300 transform hover:scale-105"
+              className="px-8 py-3 rounded-lg font-semibold border-2 border-white text-white hover:bg-white hover:text-primary transition-all duration-300 transform hover:scale-105"
             >
               {t('header.getStarted')}
             </a>

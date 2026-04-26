@@ -1,6 +1,8 @@
 import { Assets } from '../types';
 
-const pub = process.env.PUBLIC_URL;
+// import.meta.env.BASE_URL is set by Vite to the configured `base` (e.g. /solutionsnplusone-landing-frontend/).
+// We trim the trailing slash so paths like `${pub}/img/...` stay clean.
+const pub = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 export const assets: Assets = {
   logo: `${pub}/img/logo.jpg`,
